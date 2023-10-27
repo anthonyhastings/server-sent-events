@@ -1,0 +1,29 @@
+{
+  "name": "ui",
+  "description": "An interface for showing tracking information received via server-sent events",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "dev": "vite",
+    "lint": "TIMING=1 DEBUG=eslint:file-enumerator eslint --ext .ts,tsx --max-warnings 0 src/",
+    "start": "vite preview",
+    "types:check": "tsc --noEmit --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.52.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "server-sent-events",
+  "packageManager": "pnpm@8.10.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean && rm -rf .turbo && rm -rf node_modules",
+    "dev": "turbo run dev",
+    "format:check": "prettier --check .",
+    "format:apply": "prettier --write .",
+    "lint": "turbo run lint",
+    "start": "turbo run start",
+    "types:check": "turbo run types:check"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettierrc": "workspace:*",
+    "turbo": "^1.10.16"
+  }
+}

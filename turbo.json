@@ -1,0 +1,39 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "**/.env.*local",
+    "**/packages/prettierrc/index.mjs",
+    "**/packages/tsconfig/*.json"
+  ],
+  "pipeline": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "persistent": false
+    },
+    "clean": {
+      "cache": false,
+      "persistent": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "cache": true,
+      "outputs": [],
+      "persistent": false
+    },
+    "start": {
+      "cache": false,
+      "dependsOn": ["build"],
+      "persistent": true
+    },
+    "types:check": {
+      "cache": true,
+      "inputs": ["**/*.mts", "**/*.ts", "**/*.tsx"],
+      "outputs": [],
+      "persistent": false
+    }
+  }
+}
