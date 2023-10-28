@@ -9,10 +9,13 @@
     "format:check": "prettier --check .",
     "format:apply": "prettier --write .",
     "lint": "turbo run lint",
+    "prepare": "husky install",
     "start": "turbo run start",
     "types:check": "turbo run types:check"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
     "prettierrc": "workspace:*",
     "turbo": "^1.10.16"
