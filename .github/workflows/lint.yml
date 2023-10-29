@@ -36,3 +36,6 @@ jobs:
 
       - name: Check linting
         run: pnpm lint
+
+      - name: Check packages
+        run: pnpm packages:check

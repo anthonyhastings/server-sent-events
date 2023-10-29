@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/syncpack@11.2.1/dist/schema.json",
+  "source": ["package.json", "apps/*/package.json", "packages/*/package.json"],
+  "dependencyTypes": ["dev", "peer", "prod"],
+  "semverGroups": [
+    {
+      "label": "Dependencies, Dev Depenencies and Peer Dependencies should use caret for minor/patch versions",
+      "range": "^",
+      "dependencyTypes": ["dev", "peer", "prod"],
+      "dependencies": ["**"],
+      "packages": ["**"]
+    }
+  ]
+}
