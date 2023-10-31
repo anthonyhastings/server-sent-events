@@ -23,7 +23,9 @@ OrdersRouter.patch(
       (order) => order.id === req.params.id,
     );
 
-    if (orderIndex === -1) return res.status(404).json({ error: 'Not found' });
+    if (orderIndex === -1) {
+      return res.status(404).json({ error: 'Not found' });
+    }
 
     setExampleOrders(
       exampleOrders.map((order) => {
