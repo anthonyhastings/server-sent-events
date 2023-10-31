@@ -16,6 +16,8 @@ export const setExampleRoute = (newValue: Route) => {
 export let exampleOrders: Order[] = [
   {
     id: 'order_v1mW3aplThhaaomHyLrPU',
+    routeId: 'route_TZJBdCAk0bP9OYHKpORG1',
+    status: 'PENDING',
     items: [
       {
         id: 'item_OzvUYbUvK1xaJC3jqEhH2',
@@ -23,10 +25,11 @@ export let exampleOrders: Order[] = [
         price: 12999,
       },
     ],
-    status: 'PENDING',
   },
   {
     id: 'order_2dVHSgjEltuWRWXAbL16S',
+    routeId: 'route_TZJBdCAk0bP9OYHKpORG1',
+    status: 'PENDING',
     items: [
       {
         id: 'item_2IW9mQuMdLrkJN0sDk2ZW',
@@ -34,7 +37,6 @@ export let exampleOrders: Order[] = [
         price: 6999,
       },
     ],
-    status: 'PENDING',
   },
 ];
 

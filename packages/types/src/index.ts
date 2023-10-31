@@ -10,8 +10,9 @@ export const ItemSchema = z.object({
 export type Order = z.infer<typeof OrderSchema>;
 export const OrderSchema = z.object({
   id: z.string(),
-  items: z.array(ItemSchema),
+  routeId: z.string().nullable(),
   status: z.enum(['PENDING', 'DELIVERED']),
+  items: z.array(ItemSchema),
 });
 
 export type LatLng = z.infer<typeof LatLngSchema>;
