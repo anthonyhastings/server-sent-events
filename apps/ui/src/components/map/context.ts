@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import type { LatLng } from 'types';
+import { type LatLng } from 'types';
 
 type MapContextType = {
   mapInstance: google.maps.Map | null;

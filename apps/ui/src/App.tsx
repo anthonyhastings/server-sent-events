@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { envVars } from './env';
-import { MapLoader, Map, useMapContext, Marker } from './components/map';
+import { MapLoader, Map, useMapContext } from '@/components/map';
+import { Marker } from '@/components/marker';
 import './App.css';
 
 export const App = () => {

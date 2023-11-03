@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useMapContext } from '../map/context';
+import { useMapContext } from '@/components/map/context';
 import { type LatLng } from 'types';
 import truckIcon from './truck.svg';
 import './marker.css';

@@ -1,6 +1,6 @@
 import { type PropsWithChildren, useEffect, useState, useRef } from 'react';
+import { type LatLng } from 'types';
 import { MapContext } from './context';
-import { LatLng } from 'types';
 
 type MapProps = PropsWithChildren<{
   /** Inital center of the map */
