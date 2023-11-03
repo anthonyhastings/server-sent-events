@@ -7,5 +7,9 @@ type MapLoaderProps = PropsWithChildren<{
 }>;
 
 export const MapLoader = ({ apiKey, children }: MapLoaderProps) => {
-  return <GoogleMapsWrapper apiKey={apiKey}>{children}</GoogleMapsWrapper>;
+  return (
+    <GoogleMapsWrapper apiKey={apiKey} libraries={['marker']}>
+      {children}
+    </GoogleMapsWrapper>
+  );
 };

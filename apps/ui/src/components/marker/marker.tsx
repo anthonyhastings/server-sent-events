@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
-import { useMapContext } from './context';
+import { useMapContext } from '../map/context';
 import { type LatLng } from 'types';
 import truckIcon from './truck.svg';
+import './marker.css';
 
 type MarkerProps = {
   /** Center of the marker */
@@ -12,17 +13,20 @@ export const Marker = ({ center }: MarkerProps) => {
   const { mapInstance } = useMapContext();
 
   useEffect(() => {
-    console.log('Marker::useEffect', mapInstance);
+    const markerIcon = document.createElement('img');
+    markerIcon.src = truckIcon;
+    markerIcon.style.display = 'block';
+    markerIcon.style.width = '45px';
+    markerIcon.classList.add('animation-wobble');
 
-    const marker = new window.google.maps.Marker({
-      icon: truckIcon,
+    const marker = new window.google.maps.marker.AdvancedMarkerElement({
+      content: markerIcon,
       map: mapInstance,
       position: center,
     });
 
     return () => {
-      console.log('Marker::useEffect -- Cleanup');
-      marker.setMap(null);
+      marker.map = null;
     };
   }, [center, mapInstance]);
 

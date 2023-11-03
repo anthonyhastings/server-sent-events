@@ -19,6 +19,7 @@ export const Map = ({ children, initialCenter, initialZoom }: MapProps) => {
     setMapInstance(
       new window.google.maps.Map(mapElement.current, {
         center: initialCenter,
+        mapId: 'DEMO_MAP_ID', // Advanced markers require a Map ID.
         mapTypeControl: false,
         streetViewControl: false,
         zoom: initialZoom,
