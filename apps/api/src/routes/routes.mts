@@ -56,6 +56,18 @@ RoutesRouter.patch(
 );
 
 RoutesRouter.get(
+  '/:id',
+  validateSchema(RouteFetchRequestSchema),
+  (req, res) => {
+    if (req.params.id !== exampleRoute.id) {
+      return res.status(404).json({ error: 'Not found' });
+    }
+
+    return res.json(exampleRoute);
+  },
+);
+
+RoutesRouter.get(
   '/:id/track',
   validateSchema(RouteFetchRequestSchema),
   (req, res) => {
