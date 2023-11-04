@@ -5,11 +5,9 @@ import { MapContext } from './context';
 type MapProps = PropsWithChildren<{
   /** Inital center of the map */
   initialCenter: LatLng;
-  /** Initial zoom level of the map */
-  initialZoom: number;
 }>;
 
-export const Map = ({ children, initialCenter, initialZoom }: MapProps) => {
+export const Map = ({ children, initialCenter }: MapProps) => {
   const mapElement = useRef<HTMLDivElement>(null);
   const [mapInstance, setMapInstance] = useState<google.maps.Map | null>(null);
 
@@ -22,19 +20,14 @@ export const Map = ({ children, initialCenter, initialZoom }: MapProps) => {
         mapId: 'DEMO_MAP_ID', // Advanced markers require a Map ID.
         mapTypeControl: false,
         streetViewControl: false,
-        zoom: initialZoom,
-        zoomControl: false,
+        zoom: 15,
       }),
     );
-  }, [mapInstance, initialCenter, initialZoom]);
-
-  const centerMap = (newCenter: LatLng) => {
-    mapInstance?.setCenter(newCenter);
-  };
+  }, [mapInstance, initialCenter]);
 
   return (
-    <MapContext.Provider value={{ mapInstance, centerMap }}>
-      <div ref={mapElement} id="map" style={{ height: 300 }} />
+    <MapContext.Provider value={{ mapInstance }}>
+      <div ref={mapElement} id="map" style={{ height: 300, width: '100%' }} />
       {mapInstance && children}
     </MapContext.Provider>
   );

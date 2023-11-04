@@ -1,14 +1,11 @@
 import { createContext, useContext } from 'react';
-import { type LatLng } from 'types';
 
 type MapContextType = {
   mapInstance: google.maps.Map | null;
-  centerMap: (latlng: LatLng) => void;
 };
 
 export const MapContext = createContext<MapContextType>({
   mapInstance: null,
-  centerMap: () => {},
 });
 
 export const useMapContext = () => {

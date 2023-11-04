@@ -3,16 +3,11 @@ import { RouteSchema } from 'types';
 import { envVars } from '@/env';
 
 type UseFetchRouteArgs = {
-  enabled?: boolean;
-  routeId: string | null;
+  routeId: string;
 };
 
-export const useFetchRoute = ({
-  enabled = true,
-  routeId,
-}: UseFetchRouteArgs) => {
+export const useFetchRoute = ({ routeId }: UseFetchRouteArgs) => {
   return useQuery({
-    enabled: Boolean(enabled && routeId),
     queryKey: ['route', routeId] as const,
     queryFn: async () => {
       const response = await fetch(
