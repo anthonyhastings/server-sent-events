@@ -4,7 +4,7 @@ import { envVars } from '@/env';
 
 type UseFetchRouteArgs = {
   enabled?: boolean;
-  routeId: string | undefined;
+  routeId: string | null;
 };
 
 export const useFetchRoute = ({
