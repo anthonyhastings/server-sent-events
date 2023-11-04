@@ -145,3 +145,13 @@ curl --location --request PATCH 'http://localhost:3000/orders/order_2dVHSgjEltuW
 --data '{
     "status": "DELIVERED"
 }'
+
+echo -e "\n---\n"
+sleep 10
+echo 'Updating route current order to null\n'
+
+curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
+--header 'Content-Type: application/json' \
+--data '{
+  "currentOrderId": null
+}'
