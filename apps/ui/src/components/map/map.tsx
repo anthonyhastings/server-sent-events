@@ -20,14 +20,14 @@ export const Map = ({ children, initialCenter }: MapProps) => {
         mapId: 'DEMO_MAP_ID', // Advanced markers require a Map ID.
         mapTypeControl: false,
         streetViewControl: false,
-        zoom: 15,
+        zoom: 16,
       }),
     );
   }, [mapInstance, initialCenter]);
 
   return (
     <MapContext.Provider value={{ mapInstance }}>
-      <div ref={mapElement} id="map" style={{ height: 300, width: '100%' }} />
+      <div ref={mapElement} id="map" style={{ height: 600, width: '100%' }} />
       {mapInstance && children}
     </MapContext.Provider>
   );
