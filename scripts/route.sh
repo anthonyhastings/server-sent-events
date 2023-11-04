@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sleep 10
+sleep 5
 echo -e "Updating order order_v1mW3aplThhaaomHyLrPU to DELIVERED"
 
 curl --location --request PATCH 'http://localhost:3000/orders/order_v1mW3aplThhaaomHyLrPU' \
@@ -10,7 +10,7 @@ curl --location --request PATCH 'http://localhost:3000/orders/order_v1mW3aplThha
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current order to order_2dVHSgjEltuWRWXAbL16S\n'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -20,7 +20,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.649853, -5.712676'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -33,7 +33,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.649905, -5.713566'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -46,7 +46,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.649178, -5.713832'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -59,7 +59,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.648009, -5.713489'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -72,7 +72,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.647763, -5.711913'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -85,7 +85,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.649050, -5.709315'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -98,7 +98,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.650405, -5.706656'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -111,7 +111,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.651168, -5.705208'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -124,7 +124,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current location to 54.651227, -5.705712'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
@@ -137,7 +137,7 @@ curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo -e "Updating order order_2dVHSgjEltuWRWXAbL16S to DELIVERED"
 
 curl --location --request PATCH 'http://localhost:3000/orders/order_2dVHSgjEltuWRWXAbL16S' \
@@ -147,7 +147,7 @@ curl --location --request PATCH 'http://localhost:3000/orders/order_2dVHSgjEltuW
 }'
 
 echo -e "\n---\n"
-sleep 10
+sleep 5
 echo 'Updating route current order to null\n'
 
 curl --location --request PATCH 'http://localhost:3000/routes/route_TZJBdCAk0bP9OYHKpORG1' \
